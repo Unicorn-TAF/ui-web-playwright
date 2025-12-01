@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0</TargetFrameworks>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+    <PackageReference Include="Unicorn.Taf.Core" Version="4.2.0" />
+    <PackageReference Include="Unicorn.TestAdapter" Version="5.0.0" />
+    <PackageReference Include="coverlet.collector" Version="6.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Unicorn.UI.Web.Playwright\Unicorn.UI.Web.Playwright.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="TestPages\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(ProjectDir)TestPages\**" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>
