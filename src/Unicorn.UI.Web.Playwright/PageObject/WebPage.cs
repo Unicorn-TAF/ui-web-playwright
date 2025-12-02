@@ -92,6 +92,9 @@ namespace Unicorn.UI.Web.PageObject
         public override string ToString() =>
             $"page '{(string.IsNullOrEmpty(Title) ? GetType().ToString() : Title)}'";
 
+        /// <summary>
+        /// Refreshes a page.
+        /// </summary>
         public void Refresh() =>
             ((IPage)SearchContext).ReloadAsync().GetAwaiter().GetResult();
     }

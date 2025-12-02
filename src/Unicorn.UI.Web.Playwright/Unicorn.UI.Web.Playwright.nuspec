@@ -21,7 +21,7 @@
     <dependencies>
       <group targetFramework="netstandard2.0">
         <dependency id="Unicorn.UI.Core" version="4.1.0"/>
-        <dependency id="Microsoft.Playwright" version="1.43.0"/>
+        <dependency id="Microsoft.Playwright" version="1.56.0"/>
       </group>
     </dependencies>
   </metadata>
