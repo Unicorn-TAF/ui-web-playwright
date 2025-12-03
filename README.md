@@ -2,7 +2,7 @@
 
 # Unicorn.UI.Web.Playwright
 
-Implementation of browser interaction based on Selenium.
+Implementation of browser interaction based on Playwright.
 
 * Web Driver implementation
 * Typified controls implementations

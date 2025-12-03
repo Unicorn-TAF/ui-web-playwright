@@ -1,4 +1,4 @@
-﻿using Microsoft.Playwright;
+using Microsoft.Playwright;
 using BrowserType = Unicorn.UI.Web.BrowserType;
 using Unicorn.UI.Web.Driver;
 
@@ -10,30 +10,16 @@ namespace Unicorn.UnitTests.UI
 
         private static DesktopWebDriver GetDriverInstance()
         {
-            return new DesktopWebDriver(BrowserType.Chrome, GetChromeOptions(), true);
+            return new DesktopWebDriver(BrowserType.Chrome, GetBrowserOptions(), true);
         }
 
-        private static BrowserTypeLaunchOptions GetChromeOptions()
+        private static BrowserTypeLaunchOptions GetBrowserOptions()
         {
             BrowserTypeLaunchOptions browserOptions = new BrowserTypeLaunchOptions()
             {
                 Headless = false,
-                ChromiumSandbox = false,
-                //SlowMo = 0f
+                ChromiumSandbox = false
             };
-
-            //options.AddArguments(
-            //    "allow-insecure-localhost",
-            //    "ignore-certificate-errors",
-            //    "ignore-ssl-errors=yes",
-            //    "disable-extensions",
-            //    "disable-infobars",
-            //    "no-sandbox",
-            //    "disable-impl-side-painting",
-            //    "enable-gpu-rasterization",
-            //    "force-gpu-rasterization",
-            //    "headless",
-            //    "--window-size=1920x1080");
 
             return browserOptions;
         }

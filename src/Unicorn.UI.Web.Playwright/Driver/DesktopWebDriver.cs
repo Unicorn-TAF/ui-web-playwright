@@ -1,4 +1,4 @@
-﻿using Microsoft.Playwright;
+using Microsoft.Playwright;
 
 namespace Unicorn.UI.Web.Driver
 {
@@ -14,18 +14,13 @@ namespace Unicorn.UI.Web.Driver
         {
             Browser = browser;
 
-            Playwright = driverOptions == null ? 
+            Playwright = driverOptions == null ?
                 WebDriverFactory.Get(browser) :
                 WebDriverFactory.Get(browser, driverOptions);
 
             CurrentPage = Playwright.NewPageAsync().GetAwaiter().GetResult();
 
             SearchContext = CurrentPage;
-
-            if (maximize)
-            {
-                //SeleniumDriver.Manage().Window.Maximize();
-            }
 
             ImplicitlyWait = TimeoutDefault;
         }

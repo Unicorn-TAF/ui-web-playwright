@@ -26,7 +26,7 @@ namespace Unicorn.UI.Web.Driver
         protected override Type ControlsBaseType => typeof(WebControl);
 
         /// <summary>
-        /// Gets or sets current implicit wait timeout as a <see cref="TimeSpan"/> for the underlying selenium driver.
+        /// Gets or sets current implicit wait timeout as a <see cref="TimeSpan"/> for the underlying playwright driver.
         /// </summary>
         protected override TimeSpan ImplicitWaitTimeout
         {
